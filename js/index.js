@@ -1,33 +1,21 @@
-let input=document.getElementById("inputbox")
-let buttons= document.querySelectorAll('button')
-// console.log(buttons);
-let arr=Array.from(buttons);
-// console.log(buttons);
-string=""
-arr.forEach(button =>{
+const inputBox = document.getElementById('inputbox');
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    const value = button.textContent;
+   //  console.log(value);
     
-    
-    button.addEventListener('click',(e)=>{
-        // console.log(e);
-        // console.log(e.target.innerHTML);
-        
-       if(e.target.innerHTML=='='){
-          string=eval(string);
-        //   console.log(string);
-          
-          input.value=string;
-       }
-       else if(e.target.innerHTML=='AC'){
-        string="";
-        input.value=string;
-     }
-     else if(e.target.innerHTML=='DEL'){
-        string=string.substring(0,string.length-1);
-        input.value=string; 
-     }
-       else {
-        string+=e.target.innerHTML;
-        input.value=string;
-     }
-    })
-})
+
+    if (value === 'AC') {
+      inputBox.value = '';
+    } else if (value === 'DEL') {
+      inputBox.value = inputBox.value.slice(0, -1);
+    } else if (value === '=') {
+     inputBox.value = eval(inputBox.value);
+
+    } else {
+      inputBox.value += value;
+    }
+  });
+});
