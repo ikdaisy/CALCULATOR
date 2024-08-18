@@ -1,5 +1,9 @@
 const inputBox = document.getElementById('inputbox');
+// console.log(inputBox);
+
 const buttons = document.querySelectorAll('button');
+console.log(buttons);
+
 
 buttons.forEach(button => {
   button.addEventListener('click', () => {
