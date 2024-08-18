@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box ;
 }
 
 
@@ -14,7 +15,7 @@ body{
     }
 
 .calculator{
-    height: 95vh;
+    /* height: 95vh; */
     /* margin-top: 60px; */
     border: 1px solid #717377;
     padding: 10px 15px;
