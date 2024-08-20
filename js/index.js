@@ -10,6 +10,12 @@ arr.map((button)=>{button.addEventListener('click',(e)=>{
   // console.log(e.target.innerHTML);
   
   if(e.target.innerHTML=="="){
+    //multiplication operation..
+    if(str.search("x")){
+      str=str.replace("x","*")
+      str=eval(str)
+      inputBox.value=str
+    }
     
   // eval method converts the string into integer and performs the operation
     str=eval(str)
